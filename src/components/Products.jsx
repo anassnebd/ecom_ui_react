@@ -78,7 +78,7 @@ function Products() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>18,599.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>1,900.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -95,7 +95,7 @@ function Products() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>15,299.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>1,600.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -109,7 +109,7 @@ function Products() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>12,999.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>1,200.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -126,7 +126,7 @@ function Products() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>2,699.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>260.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
 
@@ -179,9 +179,10 @@ function Products() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>1000.00$</h1>
+                <h1 className='font-bold text-sm mt-3'>100.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
+            <a href="/productinfo">
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
                 <div className='flex flex-col items-center'>
                     <img src={Frame8} alt='' className='w-10/12 mt-2'/>
@@ -199,6 +200,7 @@ function Products() {
                 <h1 className='font-bold text-sm mt-3'>2000.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
+            </a>
 
             
 
@@ -222,7 +224,7 @@ function Products() {
                         <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                     </div>
-                    <h1 className='font-bold text-sm mt-3'>21,199.00 MAD</h1>
+                    <h1 className='font-bold text-sm mt-3'>2,100.00$</h1>
                     <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
                 </div>
             </div>

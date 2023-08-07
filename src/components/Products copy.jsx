@@ -80,7 +80,7 @@ function FiltredProducts() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>2,699.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>260.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -95,7 +95,7 @@ function FiltredProducts() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>2,699.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>250.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -112,7 +112,7 @@ function FiltredProducts() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>3,699.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>200.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
@@ -126,7 +126,7 @@ function FiltredProducts() {
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
 
                 </div>
-                <h1 className='font-bold text-sm mt-3'>4,499.00 MAD</h1>
+                <h1 className='font-bold text-sm mt-3'>100.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
            
