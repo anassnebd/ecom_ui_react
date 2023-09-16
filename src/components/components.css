@@ -27,3 +27,77 @@
     color: white;
     margin-left: 450px;
 }
+
+
+.dieteticien_auth{
+    background-image: url('../assets/images/client_login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adm_auth{
+    background-image: url('../assets/images/admin_login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.input_login:focus{
+    border: #5138EE 2px solid ;
+}
+
+
+.input_login{
+    border: 2px solid rgb(229, 231, 235);
+}
+
+.patient_auth{
+    background-image: url('../assets/products/Frame\ 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.input_login:focus{
+    border: #5138EE 2px solid ;
+}
+
+
+.input_login{
+    border: 2px solid rgb(229, 231, 235);
+}
+
+.doctor_auth{
+    background-image: url('../assets/products/Frame\ 3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.input_login:focus{
+    border: #5138EE 2px solid ;
+}
+
+
+.input_login{
+    border: 2px solid rgb(229, 231, 235);
+}
+
+
+.sidebar_links:hover{
+    color: white;
+    background-color: #5138EE;
+}
+
+.sidebar_links> p{
+    font-family: 'LouisGeorgeBold';
+}
