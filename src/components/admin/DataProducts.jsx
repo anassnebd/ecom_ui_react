@@ -12,6 +12,7 @@ const DataProducts = ({ data, onDelete }) => {
     () => [
       { Header: 'Products', accessor: 'name' },
       { Header: 'Quantity', accessor: 'nbr' },
+      { Header: 'Price', accessor: 'img' },
     //   {
     //     Header: 'Image',
     //     accessor: 'img',

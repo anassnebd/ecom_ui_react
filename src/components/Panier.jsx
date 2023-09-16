@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import MacImg from '../assets/products/mac.png'
+import IpadImg from '../assets/products/Frame 4.png'
 import DeleteIcon from '../assets/icons/delete.png'
 import Modal from 'react-modal';
 import './card.css';
-
+import Header from './Header';
+import ReactLoading from 'react-loading';
+import { useHistory } from 'react-router-dom';
 
 
 function Panier() {
+  // const history = useHistory();
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [ccv, setCcv] = useState('');
@@ -55,6 +59,12 @@ function Panier() {
 
     const openModal = () => {
       setModalIsOpen(true);
+      setTimeout(() => {
+        console.log("Test done");
+        // history.push('/index');
+        window.location.href = "/confirmed";
+
+      }, 3000);
     };
   
     const closeModal = () => {
@@ -69,7 +79,13 @@ function Panier() {
           overflow: 'auto',
         },
       };
+
+      const pay =()=>{
+
+      }
   return (
+    <div>
+    <Header/>
     <div className='flex mt-12 pr-9 pl-9'>
         <div className='w-8/12'>
             <div className='flex bg-white p-3 rounded-lg '>
@@ -77,8 +93,8 @@ function Panier() {
                 <div className='block w-8/12 pl-12'>
                     <h1 className='font-bold mt-5'>Macbook Pro M1 2023</h1>
                     <h1 className='flex'> <p className='font-bold'>Color : </p> <p className='ml-3'>Silver</p> </h1>
-                    <h1 className='flex'> <p className='font-bold'>Quantité : </p> <p className='ml-3'>2</p> </h1>
-                    <h1 className='text-xl font-bold mt-7'>19,299.00 MAD</h1>
+                    <h1 className='flex'> <p className='font-bold'>Quantité : </p> <p className='ml-3'>1</p> </h1>
+                    <h1 className='text-xl font-bold mt-7'>2,000$</h1>
                 </div>
                 <div>
                     <img src={DeleteIcon} className='w-6 mt-5 ml-7' alt="" srcset="" />
@@ -86,12 +102,12 @@ function Panier() {
             </div>
 
             <div className='flex bg-white p-3 rounded-lg  mt-5'>
-                <img src={MacImg} alt="" className='w-56 ml-5' srcset="" />
+                <img src={IpadImg} alt="" className='w-56 ml-5' srcset="" />
                 <div className='block w-8/12 pl-12'>
-                    <h1 className='font-bold mt-5'>Macbook Pro M1 2023</h1>
-                    <h1 className='flex'> <p className='font-bold'>Color : </p> <p className='ml-3'>Silver</p> </h1>
-                    <h1 className='flex'> <p className='font-bold'>Quantité : </p> <p className='ml-3'>2</p> </h1>
-                    <h1 className='text-xl font-bold mt-7'>19,299.00 MAD</h1>
+                    <h1 className='font-bold mt-5'>Ipad Pro 9°</h1>
+                    <h1 className='flex'> <p className='font-bold'>Color : </p> <p className='ml-3'>White</p> </h1>
+                    <h1 className='flex'> <p className='font-bold'>Quantité : </p> <p className='ml-3'>1</p> </h1>
+                    <h1 className='text-xl font-bold mt-7'>260.00$</h1>
                 </div>
                 <div>
                     <img src={DeleteIcon} className='w-6 mt-5 ml-7' alt="" srcset="" />
@@ -110,7 +126,7 @@ function Panier() {
                 <input type="text" className='w-full border-2 border-gray-300 outline-none p-1 rounded-md mt-2' placeholder='Adresse ligne 3' />
                 
             </div>
-            <h1 className='flex mt-7'> <p className=''>Prix Total : </p> <p className='ml-3 font-bold'>25,000.00 Mad</p> </h1>
+            <h1 className='flex mt-7'> <p className=''>Prix Total : </p> <p className='ml-3 font-bold'>2,260$</p> </h1>
             
             <div className="container ">
                 
@@ -164,11 +180,31 @@ function Panier() {
                 <input value={name} onChange={handleNameChange} type="text" className='w-full mr-16 border-2 border-gray-300 outline-none p-1 rounded-md mt-2' placeholder='Card Name' name="" id="" /><br/>
               
             </div>
-            <button  className='bg-primary_color rounded-lg text-white font-semibold w-full pt-3 pb-3 mt-7'>Payer Maintenant</button>
+            <button onClick={openModal} className='bg-primary_color rounded-lg text-white font-semibold w-full pt-3 pb-3 mt-7'>Payer Maintenant</button>
 
         </div>
+        <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal} 
+        contentLabel="Example Modal" 
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+          },
+          content: {
+            width: '60%', 
+            height: '70%', 
+            top: '15%', 
+            left: '20%', 
+            padding:'30px',
+          },
+        }}
+      >
+        <ReactLoading type={'spin'} color={'#000000'} height={'150px'} width={'150px'} className='m-auto mt-28 pt-1'/>
+
+      </Modal>
         
-    </div>
+    </div></div>
   )
 }
 

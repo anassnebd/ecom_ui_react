@@ -9,24 +9,35 @@ import { useDropzone } from 'react-dropzone';
 import Frame1 from '../../assets/products/Frame 1.png'
 import Frame2 from '../../assets/products/Frame 2.png'
 import Frame3 from '../../assets/products/Frame 3.png'
+import Frame8 from '../../assets/products/Frame 8.png'
 import Frame4 from '../../assets/products/Frame 4.png'
 import StartIcon from '../../assets/icons/star.png'
+import { toast } from 'react-toastify';
 
 const DataOrders = ({ data, onDelete }) => {
+    const [selectedValue, setSelectedValue] = useState('');
+
+    const handleChange = (event) => {
+        const selectedOption = event.target.value;
+        setSelectedValue(selectedOption);
+        console.log(selectedOption);
+        toast("Status changed to "+selectedOption)
+        toast.success("Confirmation mail sent "+selectedOption)
+    };
   const columns = useMemo(
     () => [
-      { Header: 'Id', accessor: 'id' },
+      { Header: 'Date', accessor: 'id' },
       { Header: 'Total', accessor: 'nbr' },
       { Header: 'Address', accessor: 'ads' },
       {
         Header: 'Status',
         accessor: 'img',
         Cell: ({ row }) => (
-          <select>
-            <option value="">{row.original.img}</option>
-            <option value="">Livred</option>
-            <option value="">Canceled</option>
-            <option value="">Paid</option>
+          <select onChange={handleChange}>
+            <option value={row.original.img}>{row.original.img}</option>
+            <option value="Livred">Livred</option>
+            <option value="Canceled">Canceled</option>
+            <option value="Paid">Paid</option>
           </select>
         ),
       },
@@ -159,6 +170,7 @@ const DataOrders = ({ data, onDelete }) => {
           Next
         </button>
       </div>
+      {/* <p>Selected value: {selectedValue}</p> */}
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal} 
@@ -178,9 +190,9 @@ const DataOrders = ({ data, onDelete }) => {
       >
         {/* Modal content goes here */}
         <div className='flex'>
-            <img src={Frame2} alt='' className='h-40 mt-2'/>
+            <img src={Frame8} alt='' className='h-40 mt-2'/>
             <div className=' p-7 mt-3'>
-                <h1>Samsung Note'23</h1>
+                <h1>Macbook Pro M2 2023</h1>
                 <div className='stars flex mt-1'>
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
                     <img src={StartIcon} className='w-4 mr-1' alt="" />
@@ -190,7 +202,7 @@ const DataOrders = ({ data, onDelete }) => {
 
                 </div>
                 <h1 className='font-bold text-xl mt-4'>
-                    1 x 1,600.00$ = 1,600.00$
+                    1 x 2,000.00$ = 2,000.00$
                 </h1>
             </div>
         </div>
@@ -213,7 +225,7 @@ const DataOrders = ({ data, onDelete }) => {
         <div className='center w-8/12 pt-7 pb-7'>
             <h1>Total Price</h1>
             <h1>______________________________________________</h1>
-            <h1 className='font-bold text-xl'>1,860.00$</h1>
+            <h1 className='font-bold text-xl'>2,260.00$</h1>
 
             <h1 className='mt-9'>Address</h1>
             <h1>______________________________________________</h1>

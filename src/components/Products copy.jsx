@@ -11,9 +11,12 @@ import Frame8 from '../assets/products/Frame 8.png'
 import Frame9 from '../assets/products/Frame 9.png'
 import StartIcon from '../assets/icons/star.png'
 import SearchIcon from '../assets/icons/search.png'
+import Header from './Header'
 
 function FiltredProducts() {
   return (
+    <div>
+    <Header/>
     <div className='products p-12'>
 
         <div className='filters flex ml-12'>
@@ -81,7 +84,10 @@ function FiltredProducts() {
 
                 </div>
                 <h1 className='font-bold text-sm mt-3'>260.00$</h1>
+                <a href="/productinfo/9">
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
+
+                </a>
             </div>
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
                 <div className='flex flex-col items-center'>
@@ -137,7 +143,7 @@ function FiltredProducts() {
 
 
 
-        </div>
+        </div></div>
   )
 }
 

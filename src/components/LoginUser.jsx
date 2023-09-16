@@ -17,7 +17,7 @@ function LoginUser() {
                 </div>
 
                 <div className='mt-16'>
-                    <a href="/dieteticien/blog">
+                    <a href="/">
                     <button className='rounded-full outline-none w-full pt-3 pb-3 bg-royal_purple text-white'>
                         S'authentifier
                     </button>

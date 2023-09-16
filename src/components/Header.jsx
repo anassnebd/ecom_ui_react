@@ -4,7 +4,7 @@ import BasketIcon from '../assets/icons/panel.png'
 function Header() {
   return (
     <div className='header flex mt-7'>
-        <h1 className='font-bold ml-44 text-lg'>Logo</h1>
+        <h1 className='font-bold ml-44 text-lg'></h1>
         <div className='flex ml-96 mt-1'>
             <a href="/" className='mr-7'>Home</a>
             <a href="/" className='mr-7'>Category</a>

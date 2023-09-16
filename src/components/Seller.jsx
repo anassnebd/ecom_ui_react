@@ -15,6 +15,7 @@ import Avatar from '../assets/images/avatar.png'
 import Modal from 'react-modal';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from './Header'
 
 function Seller() {
 
@@ -34,6 +35,8 @@ function Seller() {
         setIsModalOpen(false);
     };
   return (
+    <div>
+        <Header/>
     <div className='products p-14'>
         
         <div className=' p-4 rounded-md flex bg-white w-10/12 center'>    
@@ -114,7 +117,10 @@ function Seller() {
 
                 </div>
                 <h1 className='font-bold text-sm mt-3'>260.00$</h1>
+                <a href="/productinfo/9">
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
+
+                </a>
             </div>
 
             
@@ -267,7 +273,7 @@ function Seller() {
     </div>
 
       </Modal>
-        </div>
+        </div></div>
   )
 }
 

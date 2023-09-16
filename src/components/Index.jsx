@@ -12,10 +12,12 @@ import Frame8 from '../assets/products/Frame 8.png'
 import Frame9 from '../assets/products/Frame 9.png'
 import StartIcon from '../assets/icons/star.png'
 import SearchIcon from '../assets/icons/search.png'
+import Header from './Header'
 
 function Index() {
   return (
     <div>
+        <Header/>
         <img src={MacCard} className='m-auto mt-24 w-8/12 rounded-md' alt="" srcset="" />
         <h1 className='-mt-44 ml-80 text-white font-semibold'>Get your Laptop with<br/> <p className='text-2xl'>Best Prices in our Store</p></h1>
         <div>

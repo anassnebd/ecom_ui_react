@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Sidebar from './Sidebar'
 import { ResponsiveContainer, PieChart,CartesianGrid, Pie, Cell,BarChart, Bar, XAxis, YAxis, Tooltip, Legend, Label } from 'recharts';
 import { Home, User, Search, DollarSign,Key,ShoppingBag,ShoppingCart, Settings,CreditCard, FolderPlus, Mail } from 'react-feather';
+import Modal from 'react-modal';
 
 const data = [
     { name: 'Paid', value: 6 },
@@ -47,8 +48,30 @@ const data = [
     );
   };
 
+  
 function Dashboard() {
     const [progress, setProgress] = useState();
+    const [isModalOpen, setIsModalOpen] = useState(false); 
+
+    const openModal = () => {
+        console.log("111")
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const fileUrl = '/report_from_01-09-2023_to_10-09-2023.pdf';
+
+  const handleDownload = () => {
+    const anchor = document.createElement('a');
+    anchor.href = fileUrl;
+    anchor.download = 'report_from_01-09-2023_to_10-09-2023.pdf';
+
+    anchor.click();
+  };
+
   return (
     <div className='flex'>
         <Sidebar/>
@@ -86,6 +109,9 @@ function Dashboard() {
 
                 
             </div>
+        <button className='p-3 bg-second_royal_blue text-white hover:border-2 hover:border-royal_purple hover:bg-white hover:text-royal_purple ml-16'
+        onClick={openModal}>Generate reports</button>
+
         <div style={{ width: '400px', height: 300 }}>
             <ResponsiveContainer>
               <PieChart>
@@ -108,7 +134,7 @@ function Dashboard() {
                 <Tooltip />
               </PieChart>
             </ResponsiveContainer>
-          </div>
+        </div>
 
           <div style={{ width: '90%', height: 300 }}>
             <ResponsiveContainer>
@@ -123,6 +149,44 @@ function Dashboard() {
             </ResponsiveContainer>
           </div>
         </div>
+        <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal} 
+        contentLabel="Example Modal" 
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+          },
+          content: {
+            width: '40%', 
+            height: '50%', 
+            top: '25%', 
+            left: '30%', 
+            padding:'30px',
+          },
+        }}
+      >
+        <h1 className='text-xl text-second_royal_blue font-bold'>Report Sales</h1>
+        <div className="flex mt-5 w-full">
+            <div className=''>
+                <p>From</p>
+                <input type="date" className='bg-gray-200 p-3 w-64 rounded-md' />
+            </div>
+            <div className='ml-7'>
+                <p>To</p>
+                <input type="date" className='bg-gray-200 p-3 w-64 rounded-md ' />
+            </div>
+        </div>
+        
+
+        <button className='p-3 bg-second_royal_blue text-white hover:border-2 hover:border-royal_purple hover:bg-white hover:text-royal_purple mt-9'
+        onClick={handleDownload}>Generate Reports</button>
+        {/* <a href="./report_from_01-09-2023_to_10-09-2023.pdf" download>ss</a> */}
+        
+        
+
+
+      </Modal>
     </div>
   )
 }

@@ -11,9 +11,12 @@ import Frame8 from '../assets/products/Frame 8.png'
 import Frame9 from '../assets/products/Frame 9.png'
 import StartIcon from '../assets/icons/star.png'
 import SearchIcon from '../assets/icons/search.png'
+import Header from './Header'
 
 function Products() {
   return (
+    <div>
+        <Header />
     <div className='products p-12'>
 
         <div className='filters flex ml-12'>
@@ -127,7 +130,10 @@ function Products() {
 
                 </div>
                 <h1 className='font-bold text-sm mt-3'>260.00$</h1>
+                <a href="/productinfo/9">
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
+
+                </a>
             </div>
 
             
@@ -182,7 +188,7 @@ function Products() {
                 <h1 className='font-bold text-sm mt-3'>100.00$</h1>
                 <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
             </div>
-            <a href="/productinfo">
+            <a href="/productinfo/10">
             <div className='card_item bg-white w-72 p-3 pl-7 pr-7 pb-7 rounded-xl ml-7'>
                 <div className='flex flex-col items-center'>
                     <img src={Frame8} alt='' className='w-10/12 mt-2'/>
@@ -228,6 +234,7 @@ function Products() {
                     <button className='see_prod w-full h-9 rounded-lg mt-5 text-primary_color' style={{border:"1px solid #5932EA"}}>Voir le produit</button>
                 </div>
             </div>
+        </div>
         </div>
   )
 }

@@ -17,7 +17,7 @@ function LoginAdmin() {
                 </div>
 
                 <div className='mt-16'>
-                    <a href="/dieteticien/blog">
+                    <a href="/admin/dashboard">
                     <button className='rounded-full outline-none w-full pt-3 pb-3 bg-green-500 text-white'>
                         S'authentifier
                     </button>

@@ -8,7 +8,7 @@ import Sidebar from './Sidebar';
 import DataOrders from './DataOrders';
 
 const initialData = [
-    { id: "15/09/2023", name: 'Eval12', nbr: '1860,00 $', img:'Paid',ads:'Sidi Maarouf, Casablanca'},
+    { id: "15/09/2023", name: 'Eval12', nbr: '2260,00 $', img:'Paid',ads:'Sidi Maarouf, Casablanca'},
     { id: "15/09/2023", name: 'Evaluation', nbr: '1130,00 $', img:'Delivred',ads:'Adrar, Agadir'},
     { id: "10/09/2023", name: 'Insuffisance Cardiaque', nbr: '1500,00 $', img:'Delivred',ads:'Mhamid, Marrakech'},
     { id: "10/09/2023", name: 'Test Eval', nbr: '2500,00 $', img:'Delivred',ads:'Anfa, Casablanca'},

@@ -15,6 +15,8 @@ import ProductsAdmin from './components/admin/Products';
 import OrdersAdmin from './components/admin/Orders';
 import Seller from './components/Seller';
 import Inbox from './components/admin/Inbox';
+import IpadInfo from './components/IpadInfo';
+import ConfirmedOrder from './components/ConfirmedOrder';
 
 const App = () => {
   // const location = useLocation();
@@ -29,12 +31,14 @@ const App = () => {
           {/* Conditionally render the Header component */}
           {/* {!isLoginPage && <Header />} */}
           <Routes>
-            <Route path="/" element={<Inbox />} />
+            <Route path="/" element={<Index />} />
             <Route path="/index" element={<Index />} />
             <Route path="/products" element={<Products />} />
             <Route path="/filtersʔ5000" element={<FiltredProducts />} />
-            <Route path="/productinfo" element={<ProductInfo />} />
+            <Route path="/productinfo/10" element={<ProductInfo />} />
+            <Route path="/productinfo/9" element={<IpadInfo />} />
             <Route path="/panier" element={<Panier />} />
+            <Route path="/confirmed" element={<ConfirmedOrder />} />
             <Route path="/client/login" element={<LoginUser />} />
             <Route path="/admin/login" element={<LoginAdmin />} />
             <Route path="/admin/dashboard" element={<DashboardAdmin />} />
