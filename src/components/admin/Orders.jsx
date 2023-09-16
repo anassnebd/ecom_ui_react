@@ -8,15 +8,14 @@ import Sidebar from './Sidebar';
 import DataOrders from './DataOrders';
 
 const initialData = [
-    { id: 1, name: 'Eval12', nbr: '1860,00 $', img:'Paid',ads:'192B, Qtr Chaymae, Sidi Maarouf'},
-    { id: 2, name: 'Evaluation', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 3, name: 'Insuffisance Cardiaque', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 4, name: 'Test Eval', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 5, name: 'Eval42', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 6, name: 'Ev', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 7, name: 'Ev', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 8, name: 'Ev', nbr: '13,00 $', img:'Paid',ads:'AEA'},
-    { id: 9, name: 'Ev', nbr: '13,00 $', img:'Paid',ads:'AEA'},
+    { id: "15/09/2023", name: 'Eval12', nbr: '1860,00 $', img:'Paid',ads:'Sidi Maarouf, Casablanca'},
+    { id: "15/09/2023", name: 'Evaluation', nbr: '1130,00 $', img:'Delivred',ads:'Adrar, Agadir'},
+    { id: "10/09/2023", name: 'Insuffisance Cardiaque', nbr: '1500,00 $', img:'Delivred',ads:'Mhamid, Marrakech'},
+    { id: "10/09/2023", name: 'Test Eval', nbr: '2500,00 $', img:'Delivred',ads:'Anfa, Casablanca'},
+    { id: "10/09/2023", name: 'Eval42', nbr: '2000,00 $', img:'Delivred',ads:'Sidi Maarouf, Casablanca'},
+    { id: "10/09/2023", name: 'Ev', nbr: '260,00 $', img:'Paid',ads:'Gueliz, Marrakech'},
+    { id: "15/08/2023", name: 'Ev', nbr: '1200,00 $', img:'Paid',ads:'Marina, Casablanca'},
+    { id: "15/08/2023", name: 'Ev', nbr: '3000,00 $', img:'Paid',ads:'Daoudiat, Marrakech'},
 ];
 
 function Orders() {

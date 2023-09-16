@@ -180,7 +180,7 @@ const DataProducts = ({ data, onDelete }) => {
         
         <h2 className='mt-7'>Description</h2>
         <input
-            type="number"
+            type="text"
             className="w-full bg-gray-200 p-3 pl-5 mt-2 rounded-xl placeholder-gray-400 h-24"
             placeholder='Ajouter une question...'
         />

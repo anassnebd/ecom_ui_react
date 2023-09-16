@@ -11,6 +11,7 @@ function ProductInfo() {
         </div>
         <div className='w-7/12 h-full mt-9'>
             <h1 className='font-bold text-4xl'>Macbook Pro M2 2023</h1>
+            <p className='flex'>Published by : <a href="/sellerʔ12" className='text-blue-600 underline ml-2'>Zakaria A.</a></p>
             <div className='stars flex mt-3'>
                 <img src={StartIcon} className='w-5 mr-1' alt="" />
                 <img src={StartIcon} className='w-5 mr-1' alt="" />

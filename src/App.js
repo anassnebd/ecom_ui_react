@@ -13,6 +13,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProductsAdmin from './components/admin/Products';
 import OrdersAdmin from './components/admin/Orders';
+import Seller from './components/Seller';
+import Inbox from './components/admin/Inbox';
 
 const App = () => {
   // const location = useLocation();
@@ -27,7 +29,7 @@ const App = () => {
           {/* Conditionally render the Header component */}
           {/* {!isLoginPage && <Header />} */}
           <Routes>
-            <Route path="/" element={<OrdersAdmin />} />
+            <Route path="/" element={<Inbox />} />
             <Route path="/index" element={<Index />} />
             <Route path="/products" element={<Products />} />
             <Route path="/filtersʔ5000" element={<FiltredProducts />} />
@@ -38,6 +40,8 @@ const App = () => {
             <Route path="/admin/dashboard" element={<DashboardAdmin />} />
             <Route path="/admin/products" element={<ProductsAdmin />} />
             <Route path="/admin/orders" element={<OrdersAdmin />} />
+            <Route path="/admin/inbox" element={<Inbox />} />
+            <Route path="/sellerʔ12" element={<Seller />} />
           </Routes>
         </div>
       </Router> 

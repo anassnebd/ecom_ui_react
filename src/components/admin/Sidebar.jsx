@@ -10,8 +10,8 @@ function Sidebar() {
       <div className="flex center w-9/12 pt-10 pb-7">
         <img src={PersonImg} className='w-12 rounded-full' alt="Person" srcset="" />
         <div className='block pl-3'>
-          <h1>Anass Nebdaoui</h1>
-          <p className='font-sans text-sm -mt-1'>Administrateur</p>
+          <h1>Zakaria A.</h1>
+          <p className='font-sans text-sm -mt-1'>Seller</p>
         </div>
       </div>
       <a href='/admin/dashboard' className='sidebar_links flex w-11/12 center pt-3 pb-3 rounded-md pl-5 mt-7'>
@@ -20,15 +20,15 @@ function Sidebar() {
       </a>
       <a href='/admin/profils' className='sidebar_links flex w-11/12 center pt-3 pb-3 rounded-md pl-5 mt-7'>
         <FolderPlus className='' />
-        <p className='ml-3'>Gestion des produits</p>
+        <p className='ml-3'>Products</p>
       </a>
       <a href='/admin/profils' className='sidebar_links flex w-11/12 center pt-3 pb-3 rounded-md pl-5 mt-7'>
         <CreditCard className=''/>
-        <p className='ml-3'>Gestion des commandes</p>
+        <p className='ml-3'>Orders</p>
       </a>
       <a href='/admin/reseat-password' className='sidebar_links flex w-11/12 center pt-3 pb-3 rounded-md pl-5 mt-7'>
         <Mail className='' />
-        <p className='ml-3'>Contact</p>
+        <p className='ml-3'>Inbox</p>
       </a>
       <div className='mt-auto mb-10'>
         <a href='/' className='sidebar_links flex w-11/12 center pt-3 pb-3 rounded-md pl-5 mt-7'>

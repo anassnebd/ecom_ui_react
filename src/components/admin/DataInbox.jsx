@@ -12,32 +12,31 @@ import Frame3 from '../../assets/products/Frame 3.png'
 import Frame4 from '../../assets/products/Frame 4.png'
 import StartIcon from '../../assets/icons/star.png'
 
-const DataOrders = ({ data, onDelete }) => {
+const DataInbox = ({ data, onDelete }) => {
   const columns = useMemo(
     () => [
-      { Header: 'Id', accessor: 'id' },
-      { Header: 'Total', accessor: 'nbr' },
-      { Header: 'Address', accessor: 'ads' },
+      { Header: 'From', accessor: 'name' },
+      { Header: 'Message', accessor: 'nbr' },
+      { Header: 'Email', accessor: 'img' },
+    //   { Header: 'Address', accessor: 'ads' },
+    //   {
+    //     Header: 'Status',
+    //     accessor: 'img',
+    //     Cell: ({ row }) => (
+    //       <select>
+    //         <option value="">{row.original.img}</option>
+    //         <option value="">Livred</option>
+    //         <option value="">Canceled</option>
+    //         <option value="">Paid</option>
+    //       </select>
+    //     ),
+    //   },
       {
-        Header: 'Status',
-        accessor: 'img',
-        Cell: ({ row }) => (
-          <select>
-            <option value="">{row.original.img}</option>
-            <option value="">Livred</option>
-            <option value="">Canceled</option>
-            <option value="">Paid</option>
-          </select>
-        ),
-      },
-      {
-        Header: 'Action',
+        Header: 'See More',
         accessor: 'action',
         Cell: ({ row }) => (
             <div className='flex'>
-                <button className="p-2 rounded-lg" onClick={() => onDelete(row.original.id)}>
-                    <Trash className='text-red-600'/>
-                </button>
+                
                 <button className="p-2 ml-3 rounded-lg" onClick={() => openModal()}>
                     <Eye className='text-gray-700'/>
                 </button>
@@ -177,55 +176,43 @@ const DataOrders = ({ data, onDelete }) => {
         }}
       >
         {/* Modal content goes here */}
-        <div className='flex'>
-            <img src={Frame2} alt='' className='h-40 mt-2'/>
-            <div className=' p-7 mt-3'>
-                <h1>Samsung Note'23</h1>
-                <div className='stars flex mt-1'>
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
+        
+        <h2>Full Name</h2>
+        <input type="text" value='Zakaria pfe' className='w-full bg-gray-200 p-3 pl-5 mt-2 rounded-xl' disabled/>
 
-                </div>
-                <h1 className='font-bold text-xl mt-4'>
-                    1 x 1,600.00$ = 1,600.00$
-                </h1>
-            </div>
+        <h2 className='mt-7'>Email</h2>
+        <input
+            type="email"
+            value='zakaria.aitkatib@emsi-edu.ma'
+            className="w-full bg-gray-200 p-3 pl-5 mt-2 rounded-xl placeholder-gray-400"
+            placeholder='Ajouter une question...'
+            disabled
+        />
+        
+        <h2 className='mt-7'>Message</h2>
+        <input
+            type="text"
+            value='Hi seller! morocco shipping?'
+            className="w-full bg-gray-200 p-3 pl-5 mt-2 rounded-xl placeholder-gray-400 h-24"
+            placeholder='Ajouter une question...'
+            disabled
+        />
+       
+
+        
+
+        <div>
+        
+        <div className="flex mt-9">
+            
+            <button onClick={closeModal} className="ml-auto text-gray-500">
+                Close Modal
+            </button>
         </div>
-        <div className='flex'>
-            <img src={Frame4} alt='' className='h-40 mt-2'/>
-            <div className=' p-7 mt-3'>
-                <h1>Ipad Pro 9°</h1>
-                <div className='stars flex mt-1'>
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-                    <img src={StartIcon} className='w-4 mr-1' alt="" />
-
-                </div>
-                <h1 className='font-bold text-xl mt-4'>
-                    1 x 260.00$ = 260.00$
-                </h1>
-            </div>
-        </div>
-        <div className='center w-8/12 pt-7 pb-7'>
-            <h1>Total Price</h1>
-            <h1>______________________________________________</h1>
-            <h1 className='font-bold text-xl'>1,860.00$</h1>
-
-            <h1 className='mt-9'>Address</h1>
-            <h1>______________________________________________</h1>
-            <h1 className='font-bold text-xl'>192B, Qtr Chaymae, Sidi Maarouf</h1>
-            <h1 className='font-bold text-xl'>2000</h1>
-            <h1 className='font-bold text-xl'>Casablanca, Morocco</h1>
-        </div>
-
-
+    </div>
       </Modal>
     </div>
   );
 };
 
-export default DataOrders;
+export default DataInbox;
